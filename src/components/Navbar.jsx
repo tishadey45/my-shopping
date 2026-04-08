@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar flex justify-between bg-base-100 shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,10 +22,10 @@ export default function Navbar() {
           </div>
       
         </div>
-        <a className="font-bold text-4xl">Shopping Mall</a>
+        <a className="font-bold text-3xl"><span className="text-indigo-700">e</span>Shopping</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 text-lg">
           <li>
             <a>Home</a>
           </li>
@@ -33,13 +33,12 @@ export default function Navbar() {
             <a>Product</a>
           </li>
            <li>
-            My order
+           <a>My order</a> 
           </li>
-         
+          <li>
+            <a>Dashboard</a>
+          </li>
         </ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn bg-indigo-700 text-white">Button</a>
       </div>
     </div>
   );
