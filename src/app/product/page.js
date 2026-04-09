@@ -1,7 +1,20 @@
-export default function ProductPage() {
+import ProductCard from "@/components/productCard";
+import { getProducts } from "@/lib/api";
+
+export default async function ProductPage() {
+  const response = await getProducts();
+  // console.log(response);
+  const products = response.products; 
+  // console.log(products); 
   return (
-    <div className="max-w-4xl mx-auto py-10 px-6">
-      <h1 className="text-4xl font-bold text-center mb-6">This is Product Page</h1>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+      {products.slice(0, 9).map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
   );
 }
+
+
+
+ 
