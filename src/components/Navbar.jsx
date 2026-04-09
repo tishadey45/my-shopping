@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <div className="navbar flex justify-between bg-base-100 shadow-sm">
@@ -24,20 +26,12 @@ export default function Navbar() {
         </div>
         <a className="font-bold text-3xl"><span className="text-indigo-700">e</span>Shopping</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-lg">
-          <li> 
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Product</a>
-          </li>
-           <li>
-           <a>My order</a> 
-          </li>
-          <li>
-            <a>Dashboard</a>
-          </li>
+      <div className="">
+        <ul className="menu menu-horizontal flex gap-4 px-1 text-lg">
+        <Link href="/">Home</Link>
+        <Link href="/product">Product</Link>
+        <Link href="/myOrder">My order</Link>
+        <Link href="/dashboard">Dashboard</Link>
         </ul>
       </div>
     </div>
