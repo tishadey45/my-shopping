@@ -3,7 +3,7 @@ export const getProducts = async () => {
   return res.json();
 };
 
-export const getSingleProduct = async (id) => {
+export const getSingleProduct  = async (id) => {
   const res = await fetch(`https://dummyjson.com/products/${id}`);
   return res.json();
 };

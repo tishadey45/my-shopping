@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -13,9 +14,11 @@ export default function Banner() {
             save big!
           </p>
 
+         <Link href="/product">
           <button className=" text-white bg-indigo-700 font-semibold px-6 py-3 rounded-full  transition">
             Shop Now
           </button>
+          </Link>
         </div>
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <Image
